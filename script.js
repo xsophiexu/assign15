@@ -154,10 +154,15 @@ function createElementProper(incomingJSON) {
   newContentElement.appendChild(newContentHeading);
 
   /// Create & add footer image
-  let newImage = document.createElement("IMG");
-  newImage.classList.add("jsonImage");
-  newImage.src = incomingJSON['picture_url'];
+  let newImage = document.createElement("a");
+  newImage.setAttribute('href',incomingJSON['picture_url']);
+  let thumbnail = document.createElement("IMG");
+  thumbnail.classList.add("jsonImage");
+  newImage.setAttribute('data-fancybox','gallery');
+  newImage.setAttribute('data-caption',incomingJSON['title']);
+  thumbnail.src = incomingJSON['picture_url'];
   newContentElement.appendChild(newImage);
+  newImage.appendChild(thumbnail);
 
   /// Create & add LIST HEADLINE to the item
   let newContentSubhead = document.createElement("H4");
