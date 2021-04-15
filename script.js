@@ -191,6 +191,7 @@ mixitup('#contentGrid', {
   classNames: {
     block: 'programs', /* mixitup */
     elementFilter: 'filter-btn', /* control */
+    elementSort: 'sort-btn' /* control */
   },
   selectors: {
     target: '.contentItem' /* .mix */

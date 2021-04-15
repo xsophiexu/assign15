@@ -17,18 +17,22 @@
     <div class="text">Activities List - interesting games and activites on the web for free with no download</div>
   </div>
   <div id="filterButtons">Filter:
-    <button class="filter-btn" data-filter=".single player">Single Player</button>
-  <button class="filter-btn" data-filter=".popular">Popular</button>
-  <button class="filter-btn" data-filter=".cardGame">Board or Card Game</button>
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter=".popular">Popular</button>
+    <button class="filter-btn" data-filter=".single-player">Single Player</button>
+    <button class="filter-btn" data-filter=".card-game">Board or Card Game</button>
   </div>
-  <br><div id="contentGrid">
-    <li class="contentItem" class="single player"><a href="#">Test<span>single player</span></a></li>
-  </div>
+  <div id="sortButtons:">Sort:<button class="sort-btn" data-sort="order:asc">Ascending</button>
+    <button class="sort-btn" data-sort="order:desc">Descending</button></div>
+
+  <br><ul id="contentGrid">
+    <li class="contentItem popular" data-order="5"><a href="#">Test<br><span>popular</span></a></li>
+    <li class="contentItem single-player" data-order="1"><a href="#">Test2<br><span>single player</span></a></li>
+  </ul>
 
     <div class=footerImageContainer><div class=footerImage></div></div>
 
     <script src="script.js"></script>
-    <script src="/path/to/mixitup.min.js"></script>
-    <!-- Mixitup 3 by Patrick Kunka -->
+    <script src="/path/to/mixitup.min.js"></script><!-- Mixitup 3 by Patrick Kunka -->
 </body>
 </html>
